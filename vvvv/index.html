@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MHT CET College Mapper</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>MHT CET College Mapper</h1>
+    <p>Find the right engineering college based on your percentile</p>
+    <div class="stats">
+      <div>Top College<br /><strong>COEP Pune</strong></div>
+      <div>Average Cutoff<br /><strong>85.2 percentile</strong></div>
+      <div>Total Colleges<br /><strong>20+ mapped</strong></div>
+      <!-- Removed Last Updated -->
+    </div>
+  </header>
+
+  <section class="search-box">
+    <div>
+      <label for="percentile">Your MHT CET Percentile</label>
+      <input type="number" id="percentile" placeholder="e.g. 95.5" min="0" max="100" step="0.1" />
+    </div>
+    <div>
+      <label for="category">Your Category</label>
+      <select id="category">
+        <option value="OPEN">OPEN</option>
+        <option value="OBC">OBC</option>
+        <option value="SC">SC</option>
+        <option value="ST">ST</option>
+        <option value="EWS">EWS</option>
+        <option value="PwD">PwD</option>
+      </select>
+    </div>
+    <div>
+      <label for="college-type">College Type</label>
+      <select id="college-type">
+        <option value="All">All</option>
+        <option value="Government">Government</option>
+        <option value="Private">Private</option>
+      </select>
+    </div>
+    <div>
+      <label for="location">Location</label>
+      <select id="location">
+        <option value="All">All</option>
+        <!-- Locations will be populated dynamically -->
+      </select>
+    </div>
+  </section>
+
+  <section class="results">
+    <div class="summary">
+      <div class="eligible">
+        <h2>Eligible Colleges</h2>
+        <p id="eligible-count">0</p>
+      </div>
+      <div class="borderline">
+        <h2>Borderline Colleges</h2>
+        <p id="borderline-count">0</p>
+      </div>
+      <div class="non-eligible">
+        <h2>Non-eligible Colleges</h2>
+        <p id="non-eligible-count">0</p>
+      </div>
+    </div>
+
+    <div class="college-list" id="eligible-list">
+      <!-- Eligible college results will appear here -->
+    </div>
+    <div class="college-list" id="borderline-list">
+      <!-- Borderline college results will appear here -->
+    </div>
+    <div class="college-list" id="non-eligible-list">
+      <!-- Non-eligible college results will appear here -->
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
